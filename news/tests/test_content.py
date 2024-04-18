@@ -9,6 +9,7 @@ from django.urls import reverse
 from news.forms import CommentForm
 from news.models import Comment, News
 
+
 User = get_user_model()
 
 class TestHomePage(TestCase):
@@ -95,3 +96,4 @@ class TestDetailPage(TestCase):
         self.assertIn('form', response.context)
         # Проверим, что объект формы соответствует нужному классу формы.
         self.assertIsInstance(response.context['form'], CommentForm) 
+
